@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Recommendation</title>
+    <style>
+         body  {
+          background-image: url("background.jpeg");
+          background-color: #93cbf0da;
+        }
+        table {
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 95%;
+          margin-left: auto;
+         margin-right: auto;
+         border-radius:20px;
+         font-size: 0.9em;
+         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+        }
+
+        td, th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+
+        tr{background-color: #f2f2f2fb;}
+
+        tr:hover {background-color: #ddd;}
+
+        th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #04AA6D;
+          color: white;
+        }
+        h1 {
+          margin-top: 30px;
+           font-family: "Lucida Handwriting", "Courier New", monospace;
+}
+        </style>
+
+</head>
+
+<body>
+    <div class=page>
+        <h1 style="text-align:center;">Recommendations</h1>
+        {% block content %}
+
+        {% if table == 0 %}
+            <h1>No Restaurants in your area</h1>
+        {% else %}
+
+        {% for table in tables %}
+
+          {{ table|safe }}
+        {% endfor %}
+        {% endif %}
+        {% endblock content %}
+
+      </div>
+      <!-- <form action="/" method="post" >
+        <input type="submit" value="Go Back to Home">
+    </form> -->
+
+
+</body>
+</html>

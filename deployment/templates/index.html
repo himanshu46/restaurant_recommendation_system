@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommendation</title>
+    <style>
+        body  {
+          background-image: url("background.jpeg");
+          background-color: #cccccc;
+        }
+        input[type=text], input[type=number] {
+            width: 400px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.head2 {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+.head1 {
+  font-family: "Copperplate", "Courier New", monospace;
+}
+        </style>
+</head>
+<body>
+<h1 class ="head1" style="text-align:center;margin-top: 50px;">Restaurant Recommendation System</h1>
+    <h1 class="head2" style="text-align:center;margin-top: 200px;">Enter your location</h1>
+
+    <br/>
+
+
+    <form action="/view" method="post"  style="text-align:center;">
+      <label class ="head1">Address:</label>
+      <input type="text" name="loc" required />
+      <label class ="head1">Minimum Cost:</label>
+        <input type="number" name="min" />
+        <br/>
+        <label class ="head1">Maximum Cost:</label>
+        <input type="number" name="max" />
+        <label class ="head1">Distance in meters:</label>
+        <input type="number" name="dist" />
+        <br/>
+        <input type="submit" value="Submit" />
+    </form>
+
+
+</body>
+</html>
